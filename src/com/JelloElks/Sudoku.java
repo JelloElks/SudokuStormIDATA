@@ -25,20 +25,6 @@ public class Sudoku {
         ChangeTwoCell(grid);
     }
 
-    static void Draw(int[][] grid, String _s) {
-        for (int x = 0; x < 4; x++) {
-            for (int y = 0; y < 4; y++) {
-                //System.out.println(grid[x][y]);
-                s += (Integer.toString(grid[x][y])+" ");
-            }
-            s += "\n";
-        }
-        System.out.println(s);
-        //Test
-        //_s = s;
-        //s = "";
-    }
-
     static void ChangeTwoCell(int[][] grid) {
 
         int findVal1 = rand.nextInt(4)+1;
@@ -74,14 +60,6 @@ public class Sudoku {
         delRand(grid);
     }
 
-    //icke in use
-    static void Update(int[][] grid, int shuffleLevel){
-        for (int repeat = 0; repeat < shuffleLevel; repeat++) {
-            //ChangeTwoCell(grid, rand.nextInt(4)+1, rand2.nextInt(4)+1);
-        }
-
-    }
-
     private static void delRand(int[][] grid) {
         for (int i = 0; i < 4; i++) {
             int randomPosition = (int) Math.floor(Math.random() * grid.length);
@@ -90,6 +68,32 @@ public class Sudoku {
         }
         Draw(grid,s);
     }
+
+    static void Draw(int[][] grid, String _s) {
+        for (int x = 0; x < 4; x++) {
+            for (int y = 0; y < 4; y++) {
+                //System.out.println(grid[x][y]);
+                s += (Integer.toString(grid[x][y])+" ");
+            }
+            s += "\n";
+        }
+        System.out.println(s);
+        //Test
+        //_s = s;
+        //s = "";
+    }
+
+
+    //Not in use
+    /*
+    static void Update(int[][] grid, int shuffleLevel){
+        for (int repeat = 0; repeat < shuffleLevel; repeat++) {
+            //ChangeTwoCell(grid, rand.nextInt(4)+1, rand2.nextInt(4)+1);
+        }
+
+    }
+    */
+
 
     public static void main(String[] args) {
 
