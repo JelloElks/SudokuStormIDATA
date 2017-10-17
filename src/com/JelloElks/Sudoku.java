@@ -11,6 +11,20 @@ public class Sudoku {
     private static int max = 4;
     private static int min = 1;
 
+    public static void main(String[] args) {
+
+        s = "";
+        Create(grid);
+        //Update(grid,10);
+        //ChangeCell(grid);
+        //Draw(grid,s);
+        //delRand(grid);
+
+        //ChangeCell(grid, 1, 1);
+        //Draw(grid, "a");
+
+    }
+
     static void Create(int[][] grid) {
 
         for (int i = 0; i < 4; i++) {
@@ -93,18 +107,4 @@ public class Sudoku {
     }
     */
 
-
-    public static void main(String[] args) {
-
-        s = "";
-        Create(grid);
-        //Update(grid,10);
-        //ChangeCell(grid);
-        //Draw(grid,s);
-        //delRand(grid);
-
-        //ChangeCell(grid, 1, 1);
-        //Draw(grid, "a");
-
-    }
 }
