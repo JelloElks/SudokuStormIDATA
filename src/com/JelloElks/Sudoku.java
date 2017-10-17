@@ -1,6 +1,5 @@
 package com.JelloElks;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Sudoku {
@@ -12,7 +11,7 @@ public class Sudoku {
     private static int max = 4;
     private static int min = 1;
 
-    static void Init(int[][] grid) {
+    static void Create(int[][] grid) {
 
         for (int i = 0; i < 4; i++) {
             //System.out.println("i: "+i);
@@ -22,10 +21,10 @@ public class Sudoku {
                 //System.out.println(grid[i][j] = (i * 2 + i / 2 + j) % 4 + 1);
             }
         }
-        ChangeTwoCell(grid);
+        ChangeCell(grid);
     }
 
-    static void ChangeTwoCell(int[][] grid) {
+    static void ChangeCell(int[][] grid) {
 
         int findVal1 = rand.nextInt(4)+1;
         int findVal2 = rand2.nextInt(4)+1;
@@ -88,7 +87,7 @@ public class Sudoku {
     /*
     static void Update(int[][] grid, int shuffleLevel){
         for (int repeat = 0; repeat < shuffleLevel; repeat++) {
-            //ChangeTwoCell(grid, rand.nextInt(4)+1, rand2.nextInt(4)+1);
+            //ChangeCell(grid, rand.nextInt(4)+1, rand2.nextInt(4)+1);
         }
 
     }
@@ -98,13 +97,13 @@ public class Sudoku {
     public static void main(String[] args) {
 
         s = "";
-        Init(grid);
+        Create(grid);
         //Update(grid,10);
-        //ChangeTwoCell(grid);
+        //ChangeCell(grid);
         //Draw(grid,s);
         //delRand(grid);
 
-        //ChangeTwoCell(grid, 1, 1);
+        //ChangeCell(grid, 1, 1);
         //Draw(grid, "a");
 
     }
